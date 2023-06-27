@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Dool</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="aboutScreen" class="disabled">
+        <div class="about-card">
+            <span>Welcome to To-Dool!</span>
+            <p>To-Dool is a small Todo List project made under the umbrella of the FullStack Javascript course of The Odin Project. </p>
+            <p>My goal is to make a fully functional Todo List with a minimalist aesthetic, and pair it with a Web Storage API so you can use it on a daily basis like any other Todo app.</p>
+            <p>The projects are limited to 10, and ToDo's are limited to 6 per project. I chose this limits primarly with an aesthetically purpose, and also because I wanna make clear that To-Dool is a very small project.</p>
+            <p>As I'm still learning the WebDev basis, feel free to contact me via Github if you encounter any error, or have some advice for a rookie.</p>
+            <p>Hope you like it!</p>
+            <button type="button" id="aboutCloseButton">Close</button>
+        </div>
+    </div>
+    <div id="todo-form" class="disabled">
+        <div class="form-card">
+            <form action="">
+                <span>Create a new To-Do</span>
+                <div>
+                    <label for="titleForm">Title</label>
+                    <input type="text" id="titleForm" minlength="4" required>
+                </div>
+                <div>
+                    <label for="descriptionForm">Description (max. 500 char)</label>
+                    <input type="text" id="descriptionForm" maxlength="500">
+                </div>
+                <div>
+                    <label for="dateForm">Date</label>
+                    <input type="date" id="dateForm" required>
+                </div>
+                <div>
+                    <span id="priorityForm">Priority</span>
+                    <div class="radio">
+                        <label for="high-radio">High</label>
+                        <input type="radio" name="priority" id="high-radio" required>
+                        <label for="mid-radio">Mid</label>
+                        <input type="radio" name="priority" id="mid-radio">
+                        <label for="low-radio">Low</label>
+                        <input type="radio" name="priority" id="low-radio">
+                    </div>
+                </div>
+                <div>
+                    <label for="projectNameForm">Project to add the To-Do</label>
+                    <select name="project" id="projectNameForm">
+                    </select>
+                </div>
+                <button type="button" id="toDoFormButton">Create</button>
+                <button type="button" id="toDoCloseForm">Close</button>
+            </form>
+        </div>
+    </div>
+    <div id="edit-todo" class="disabled">
+        <div class="form-card">
+            <form action="">
+                <span>Edit To-Do</span>
+                <div>
+                    <label for="titleEditForm">Title</label>
+                    <input type="text" id="titleEditForm" minlength="4" required>
+                </div>
+                <div>
+                    <label for="descriptionEditForm">Description</label>
+                    <input type="text" id="descriptionEditForm" maxlength="500">
+                </div>
+                <div>
+                    <label for="dateEditForm">Date</label>
+                    <input type="date" id="dateEditForm" required>
+                </div>
+                <div>
+                    <span id="priorityEditForm">Priority</span>
+                    <div class="radio">
+                        <label for="high-radio-edit">High</label>
+                        <input type="radio" name="priorityEdit" id="high-radio-edit" required>
+                        <label for="mid-radio-edit">Mid</label>
+                        <input type="radio" name="priorityEdit" id="mid-radio-edit">
+                        <label for="low-radio-edit">Low</label>
+                        <input type="radio" name="priorityEdit" id="low-radio-edit">
+                    </div>
+                </div>
+                <div>
+                    <label for="projectNameEditForm">Project to add the To-Do</label>
+                    <select name="project" id="projectNameEditForm">
+                    </select>
+                </div>
+                <button type="button" id="toDoEditFormButton">Edit</button>
+                <button type="button" id="toDoEditCloseForm">Close</button>
+            </form>
+        </div>
+    </div>
+    <div id="project-form" class="disabled">
+        <div class="form-card">
+            <form action="">
+                <span>Create a new Project</span>
+                <div>
+                    <label for="projectForm">Project name</label>
+                    <input type="text" id="projectForm">
+                </div>
+                <button type="button" id="projectFormButton">Create</button>
+                <button type="button" id="projectCloseForm">Close</button>
+
+            </form>
+        </div>
+    </div>
+    <div class="menu" id="menu">
+        <div class="title">
+            <div class="menu-icon" id="menu-icon">
+                <div class="point"></div>
+                <div class="point"></div>
+                <div class="point"></div>
+            </div>
+            <span>To-Dool</span>
+        </div>
+        <div class="menu-options">
+            <div id="create-project">
+                <img src="../img/project.png" class="icon" alt="">
+                <span>Create new project</span>
+            </div>
+            <div id="create-todo">
+                <img src="/img/todo.png" class="icon" alt="">
+                <span>Create new to-do</span>
+            </div>
+            <div id="about">
+                <img src="/img/about.png" alt="" class="icon">
+                <span>About To-Dool</span>
+            </div>
+        </div>
+    </div>
+    <div class="projects-dashboard" id="dashboard"></div>
+
+</body>
+<script src="../dist/main.js"></script>
+
+</html>
